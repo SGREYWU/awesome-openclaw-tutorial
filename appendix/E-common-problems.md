@@ -399,7 +399,72 @@ clawhub install @openclaw/skill-file-search@1.2.0
 
 ## 🚪 Gateway问题
 
-### 问题11：Gateway启动失败
+### 问题11：升级后AI只能聊天不能干活（2026.3.2+版本）
+
+**症状**：升级到 OpenClaw 2026.3.2 或更高版本后，AI只能聊天，无法执行文件管理、命令执行等工具功能
+
+**原因**：2026.3.2 版本将工具权限和聊天能力做了隔离，默认 profile 改为 `messaging`（纯聊天模式）
+
+**5种 profile 说明**：
+
+| Profile | 功能说明 |
+|---------|---------|
+| `messaging` | 只能发消息、管理会话（光聊天不干活） |
+| `default` | 默认工具集（不含命令执行） |
+| `coding` | 编程相关工具 |
+| `full` | 完整工具集，包含命令执行（**推荐**） |
+| `all` | 所有工具全开 |
+
+**解决方案**：
+
+**方法1：命令行修复（推荐）**
+
+适用于：有命令行环境（本地/虚拟机/云服务器）
+
+```bash
+# 查看当前profile
+openclaw config get tools
+
+# 如果不是full，切换为full
+openclaw config set tools.profile full
+
+# 重启Gateway生效
+openclaw gateway restart
+```
+
+**方法2：Web UI修复（无需编程）**
+
+适用于：不方便使用编程工具的环境（手机版等）
+
+1. 访问 `http://127.0.0.1:18789`（或你的服务器IP）
+2. 点击左侧「配置」
+3. 切换到 **Raw** 格式
+4. 找到 `tools` 配置项
+5. 将 `profile` 改为 `"full"`
+
+```json
+{
+  "tools": {
+    "profile": "full"
+  }
+}
+```
+
+6. 保存配置并重启Gateway
+
+**方法3：使用Codex或Claude Code**
+
+如果你无法直接操作命令行，可以让AI编程助手帮你修复：
+
+```
+运行openclaw config get tools，查看OpenClaw的profile，如果不是full的话，切换成full，切换之后重新gateway
+```
+
+✅ **验证**：修复后，尝试让AI执行文件搜索或命令操作，应该能正常工作
+
+---
+
+### 问题12：Gateway启动失败
 
 **症状**：
 ```bash

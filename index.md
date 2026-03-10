@@ -33,7 +33,98 @@ title: 首页
 
 ---
 
-## 🚨 2026.3.7 版本重要提示：Gateway认证要求
+## 🚨 版本升级重要提示
+
+### ⚠️ 2026.3.7 版本：Gateway认证要求（Breaking Change）
+
+**OpenClaw 2026.3.7 Breaking Change**：Gateway认证现在要求显式设置 `gateway.auth.mode`。你必须明确选择 `token` 或 `password` 认证方式，不再有「无认证」的默认选项。
+
+**配置方法**：
+
+在 `~/.openclaw/openclaw.json` 中添加以下配置：
+
+```json
+{
+  "gateway": {
+    "auth": {
+      "mode": "token",  // 或 "password"
+      "token": "your-secret-token"
+    }
+  }
+}
+```
+
+**⚠️ 重要提示**：如果你从旧版本升级到 v2026.3.7 且没有配置认证，Gateway将拒绝启动。
+
+**快速修复（命令行）**：
+
+```bash
+# 设置token认证
+openclaw config set gateway.auth.mode token
+openclaw config set gateway.auth.token "your-secret-token"
+
+# 重启Gateway
+openclaw gateway restart
+```
+
+---
+
+### 🔧 2026.3.2 版��：AI变"哑巴"了？
+
+**问题现象**：升级到 2026.3.2 后，OpenClaw只能聊天不能干活（文件管理、命令执行等工具功能全部失效）
+
+**问题原因**：该版本将工具权限和聊天能力做了隔离，默认 profile 改为 `messaging`（纯聊天模式）
+
+**5种 profile 说明**：
+
+| Profile | 功能说明 |
+|---------|---------|
+| `messaging` | 只能发消息、管理会话（光聊天不干活） |
+| `default` | 默认工具集（不含命令执行） |
+| `coding` | 编程相关工具 |
+| `full` | 完整工具集，包含命令执行（**推荐**） |
+| `all` | 所有工具全开 |
+
+**快速修复方法**：
+
+#### 方法1：命令行修复（推荐）
+
+适用于：有命令行环境（本地/虚拟机/云服务器）
+
+```bash
+# 查看当前profile
+openclaw config get tools
+
+# 如果不是full，切换为full
+openclaw config set tools.profile full
+
+# 重启Gateway生效
+openclaw gateway restart
+```
+
+#### 方法2：Web UI修复（无需编程）
+
+适用于：不方便使用编程工具的环境（手机版等）
+
+1. 访问 `http://127.0.0.1:18789`（或你的服务器IP）
+2. 点击左侧「配置」
+3. 切换到 **Raw** 格式
+4. 找到 `tools` 配置项
+5. 将 `profile` 改为 `"full"`
+
+```json
+{
+  "tools": {
+    "profile": "full"
+  }
+}
+```
+
+6. 保存配置并重启Gateway
+
+---
+
+## 📖 关于本教程
 
 **OpenClaw 2026.3.7 Breaking Change**：Gateway认证现在要求显式设置 `gateway.auth.mode`。你必须明确选择 `token` 或 `password` 认证方式，不再有「无认证」的默认选项。
 
