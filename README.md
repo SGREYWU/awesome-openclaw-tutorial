@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/xianyu110/awesome-openclaw-tutorial?style=social)](https://github.com/xianyu110/awesome-openclaw-tutorial)
 [![GitHub forks](https://img.shields.io/github/forks/xianyu110/awesome-openclaw-tutorial?style=social)](https://github.com/xianyu110/awesome-openclaw-tutorial)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v2026.3.7-green.svg)](https://github.com/xianyu110/awesome-openclaw-tutorial)
+[![Version](https://img.shields.io/badge/version-v2026.3.8-green.svg)](https://github.com/xianyu110/awesome-openclaw-tutorial)
 [![Status](https://img.shields.io/badge/status-完成-success.svg)](PROJECT-SUMMARY.md)
 
 ## 🎉 项目状态
@@ -214,7 +214,7 @@ openclaw gateway restart
 
 ## 📖 关于本教程
 
-> ⚠️ **版本说明**：由于 OpenClaw 仍在快速开发中，本教程基于 **2026.3.7** 版本编写。该版本经过充分验证，稳定可靠。
+> ⚠️ **版本说明**：由于 OpenClaw 仍在快速开发中，本教程基于 **2026.3.8** 版本编写。该版本经过充分验证，稳定可靠。（已验证）
 
 > 💡 **重要前提**：OpenClaw 预装了 **49个内置技能（Skills）**，本教程中的大部分功能演示都基于这些内置技能。这些技能涵盖文件管理、知识管理、日程管理、自动化等核心场景，开箱即用。
 > 
@@ -757,7 +757,14 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 
 ## 🆕 OpenClaw 最新版本
 
-**当前最新���本**：openclaw 2026.3.7（2026.3.7日）
+**当前最新版本**：openclaw2026.3.8（2026.3.8）
+
+**2026.3.8重点更新（建议关注）**：
+- ✅ 新增备份命令：`openclaw backup create` / `openclaw backup verify`（支持 `--only-config`、`--no-include-workspace`）
+- ✅ Talk 模式新增：`talk.silenceTimeoutMs`（自动发送前的静默等待）
+- ✅ ACP 增强：`openclaw acp --provenance off|meta|meta+receipt`（可选溯源+回执注入）
+- ✅ Brave web_search 新模式（可选）：`tools.web.search.brave.mode: "llm-context"`
+- ✅ Chrome Relay 跨环境绑定（按需）：`browser.relayBindHost`
 
 **主要更新**：
 - ✅ Gateway认证要求（Breaking Change）：必须显式设置gateway.auth.mode

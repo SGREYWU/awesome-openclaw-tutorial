@@ -10,8 +10,8 @@ title: 首页
 [![GitHub stars](https://img.shields.io/github/stars/xianyu110/awesome-openclaw-tutorial?style=social)](https://github.com/xianyu110/awesome-openclaw-tutorial)
 [![GitHub forks](https://img.shields.io/github/forks/xianyu110/awesome-openclaw-tutorial?style=social)](https://github.com/xianyu110/awesome-openclaw-tutorial)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v2026.3.7-green.svg)](https://github.com/xianyu110/awesome-openclaw-tutorial)
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.3.7-orange.svg)](https://openclaw.ai)
+[![Version](https://img.shields.io/badge/version-v2026.3.8-green.svg)](https://github.com/xianyu110/awesome-openclaw-tutorial)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.3.8-orange.svg)](https://openclaw.ai)
 
 ---
 
@@ -160,7 +160,7 @@ openclaw gateway restart
 
 ## 📖 关于本教程
 
-> ⚠️ **版本说明**：本教程基于 **OpenClaw 2026.3.7** 版本编写，经过充分验证，稳定可靠。
+> ⚠️ **版本说明**：本教程基于 **OpenClaw2026.3.8**版本编写（已验证）。
 
 > 💡 **重要前提**：OpenClaw 预装了 **49 个内置技能（Skills）**，开箱即用，无需额外安装即可完成本教程大部分演示。
 
