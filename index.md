@@ -220,6 +220,7 @@ openclaw gateway restart
 ### 附录：速查手册
 
 #### 基础附录（A-F）
+
 | 附录 | 内容 |
 |------|------|
 | [附录A：命令速查表](appendix/A-command-reference.md) | 100+ 常用命令，5 大类快速查找 |
@@ -230,6 +231,7 @@ openclaw gateway restart
 | [附录F：避坑指南与最佳实践](appendix/F-best-practices.md) | 新手必看，前人经验总结 |
 
 #### 高级附录（G-O）
+
 | 附录 | 内容 |
 |------|------|
 | [附录G：文档链接验证](appendix/G-links-validation.md) | 所有链接状态检查 |
@@ -243,6 +245,7 @@ openclaw gateway restart
 | [附录O：国产 Claw 产品选购指南](appendix/O-domestic-claw-products.md) | 国产AI Agent产品特点和差异，选型建议 |
 
 #### 安全指南
+
 | 附录 | 内容 |
 |------|------|
 | [安全指南](docs/03-advanced/99-security-guide.md) | 安全模型、已知安全事件、Skills安全与最佳实践 |
