@@ -988,7 +988,7 @@ OpenClaw：已保存到Mac备忘附录！
 **步骤2：配置 OpenClaw**
 ```bash
 # 安装Notion Skill
-openclaw skill install notion-sync
+clawhub install notion-sync
 
 # 配置API Token
 openclaw config set notion.token "your-token-here"
@@ -1031,7 +1031,7 @@ OpenClaw：已保存到Notion！
 
 **步骤1：安装Obsidian Skill**
 ```bash
-openclaw skill install obsidian-sync
+clawhub install obsidian-sync
 **步骤2：配置Vault路径**
 ```bash
 # 设置Obsidian Vault路径

@@ -3611,13 +3611,13 @@ openclaw agent --message "帮我写一个排序算法"
 ```bash
 # 为代码助手安装开发布相关的 Skills
 openclaw agents switch code-agent
-openclaw skill install github-integration
-openclaw skill install code-review
+clawhub install github-integration
+clawhub install code-review
 
 # 为内内容助手安装写作相关的 Skills
 openclaw agents switch content-agent
-openclaw skill install grammar-check
-openclaw skill install seo-optimizer
+clawhub install grammar-check
+clawhub install seo-optimizer
 ```
 ### 常见访问题
 
