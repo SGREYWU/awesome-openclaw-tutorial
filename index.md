@@ -60,7 +60,7 @@ title: 首页
 - 💬 [第3章：快速上手](docs/01-basics/03-quick-start.md) - 发送第一条消息
 
 ### 🔥 核心功能（实战）
-- 📁 [第4章��文件管理](docs/02-core-features/04-file-management.md) - 效率提升81%
+- 📁 [第4章：文件管理](docs/02-core-features/04-file-management.md) - 效率提升81%
 - 🧠 [第5章：知识库](docs/02-core-features/05-knowledge-management.md) - 第二大脑系统
 - 📅 [第6章：日程管理](docs/02-core-features/06-schedule-management.md) - AI自动创建日程
 - ⚙️ [第7章：自动化](docs/02-core-features/07-automation-workflow.md) - 24小时为你工作
@@ -163,7 +163,7 @@ openclaw gateway restart
 - ✅ **15个附录**：约141,000字
 - ✅ **总字数**：408,000字
 - ✅ **70+实战案例**：可直接应用
-- ✅ **��整配图**：50+张配置截图
+- ✅ **完整配图**：50+张配置截图
 
 ### 🎯 适合人群
 
