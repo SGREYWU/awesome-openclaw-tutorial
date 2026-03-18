@@ -43,17 +43,13 @@ Skills 本质上就是教 AI 按固定流程做事的操作说明书，一旦写
 
 比如我们平时写文章节，在没有 Skills 之前，每次都要按以下步骤重复说：
 
-```text
 帮我总结文章节 → 翻译 → 改成公众号风格 → 加标题 → 输出 Markdown
-```
 
 有了 Skills 之后：
 
-```text
 你只需要一句：使用「技术文章节转公众号」Skill
 
 AI 会自动按你设定的步骤执行。
-```
 
 ### 8.0.3 Skills vs MCP vs Tools
 
@@ -89,7 +85,6 @@ Skills用渐进式加载来高效管理上下文：
 
 **Token消耗对比**：
 
-```text
 传统方式（全量加载）：
 - 10个Skills × 500字/个 = 5000字
 - 约1250 tokens
@@ -100,7 +95,6 @@ Skills方式（渐进式加载）：
 - 总计：约250 tokens
 
 节省：80% tokens
-```
 
 ### 8.0.5 支持Skills的工具
 
@@ -128,10 +122,8 @@ Skills方式（渐进式加载）：
 
 1个 Skill 本质上就是1个 Markdown 文件（文件名固定为 SKILL.md）
 
-```text
 my-skill/
 └── SKILL.md   （唯一必需）
-```
 
 **SKILL.md 基本模板**：
 
@@ -159,7 +151,6 @@ description: 从 PDF 中提取文本和表格，填写表单，并合并文档
 
 - 读取 PDF 表单字段
 - 按输入数据填充并生成新文件
-```text
 **Skills核心结构示意图**：
 
 ![Skills核心结构图 - SKILL.md定义技能能力](https://upload.maynor1024.live/file/1770813820310_image1.png)
@@ -179,13 +170,11 @@ description: 从 PDF 中提取文本和表格，填写表单，并合并文档
 
 如果你需要一些参考资料、参考实例、执行脚本，可以使用更复杂的 Skill 目附录结构：
 
-```
 my-skill/
 ├── SKILL.md      # 必需：指令 + 元数据
 ├── scripts/      # 可选：可执行代码
 ├── references/   # 可选：文档资料
 └── assets/       # 可选：模板、资源
-```text
 ![复杂Skills目附录结构 - 包含脚本和依赖](https://upload.maynor1024.live/file/1770813829999_image2.png)
 
 ---
@@ -253,7 +242,6 @@ ClawHub是OpenClaw的官方技能市场（https://clawhub.ai），类似于App S
 
 OpenClaw从3个位置加载Skills，优先级从高到低：
 
-```
 1. 工作区Skills：<workspace>/skills（最高优先级）
    - 单智能体专用
    - 项目特定的Skills
@@ -265,10 +253,8 @@ OpenClaw从3个位置加载Skills，优先级从高到低：
 3. 内置Skills：随安装包发布布（最低优先级）
    - OpenClaw官方Skills
    - 基础功能Skills
-```text
 **优先级规则**：
 
-```
 如果同名Skills存在于多个位置：
 工作区Skills > 托管/本地Skills > 内置Skills
 
@@ -278,7 +264,6 @@ OpenClaw从3个位置加载Skills，优先级从高到低：
 - 工作区Skills：file-search v2.0（项目专用）
 
 最终加载：工作区的 v2.0 版本
-```text
 **额外Skills目附录**：
 
 可以通过配置添加额外的Skills文件夹：
@@ -294,7 +279,6 @@ OpenClaw从3个位置加载Skills，优先级从高到低：
     }
   }
 }
-```text
 ### 8.1.3 ClawHub使用指南
 
 **访问方式**：
@@ -308,7 +292,6 @@ clawhub --help
 
 # 方式3：OpenClaw内访问
 你：打开ClawHub
-```text
 **常用命令**：
 
 ```bash
@@ -338,7 +321,6 @@ clawhub list
 
 # 卸载Skills
 clawhub uninstall <skill-slug>
-```text
 **安装位置说明**：
 
 ```bash
@@ -348,7 +330,6 @@ clawhub install nano-banana-pro
 
 # 如果不在工作目附录，回退到配置的工作区
 # 安装到：<workspace>/skills/nano-banana-pro/
-```text
 **ClawHub界面布局**：
 
 
@@ -396,7 +377,6 @@ clawhub install nano-banana-pro
 
 **搜索技巧**：
 
-```
 
 # 按名称搜索
 搜索：file-search
@@ -412,7 +392,6 @@ clawhub install nano-banana-pro
 
 # 组合搜索
 搜索：文件 #管理 @官方
-```text
 ### 8.1.4 技能评价体系
 
 **评价维度**：
@@ -427,7 +406,6 @@ clawhub install nano-banana-pro
 
 **评分标准**：
 
-```
 ⭐⭐⭐⭐⭐ (5.0) - 完美
 - 功能完善
 - 文档详细
@@ -457,10 +435,8 @@ clawhub install nano-banana-pro
 - 无文档
 - Bug很多
 - 不再维护
-```text
-**如何选择Skills**：
+**��何选择Skills**：
 
-```
 ✅ 推荐安装：
 - 评分 ≥ 4.0
 - 下载量 > 1000
@@ -478,18 +454,15 @@ clawhub install nano-banana-pro
 - 长期不更新
 - 无文档
 - Bug多
-```text
 ### 8.1.5 Skills 安装和管理
 
 **安装方式**：
 
 **方式1：通过ClawHub安装**
-```
 1. 打开ClawHub
 2. 搜索Skills
 3. 点击"安装"按钮
 4. 等待安装完成
-```text
 **方式2：通过命令行安装**
 ```bash
 # 安装单个Skill
@@ -500,7 +473,6 @@ openclaw skill install file-search note-sync calendar-sync
 
 # 从URL安装
 openclaw skill install https://github.com/user/skill-name
-```text
 **方式3：通过OpenClaw对话安装**
 ```
 你：帮我安装file-search这个Skill
@@ -522,7 +494,6 @@ Skill信息：
 - 功能：智能文件搜索
 
 现在你可以使用文件搜索功能了！
-```text
 **查看已安装Skills**：
 
 ```bash
@@ -551,7 +522,6 @@ openclaw skill list
 ✅ screenshot v2.2.0
 ✅ translator v1.6.0
 ✅ calculator v1.1.0
-```text
 **更新Skills**：
 
 ```bash
@@ -573,7 +543,6 @@ openclaw skill update file-search
 3. calendar-sync: v3.0.0 → v3.1.0
 
 是否更新？[Y/n]
-```text
 **卸载Skills**：
 
 ```bash
@@ -590,7 +559,6 @@ openclaw skill uninstall file-search note-sync
 - 删除文件... ✅
 
 卸载成功！✅
-```text
 ---
 
 ## 8.2 必装Skills推荐
@@ -617,10 +585,8 @@ OpenClaw：找到3个匹配文件：
 1. 2026年1月发布票.pdf
 2. 跑步机购买发布票.pdf
 3. 怎么办公用品发布票.pdf
-```text
 **2. file-organizer（文件自动整理）**
 
-```
 ⭐ 评分：4.8/5.0
 📥 下载量：35,000+
 👤 作者：OpenClaw官方
@@ -641,10 +607,8 @@ OpenClaw：正在整理...
 - 其他 → Others/Downloads/
 
 整理完成！共处理156个文件 ✅
-```text
 **3. batch-processor（批量文件处理）**
 
-```
 ⭐ 评分：4.7/5.0
 📥 下载量：28,000+
 👤 作者：社区开发布者
@@ -664,12 +628,10 @@ OpenClaw：正在转换...
 - image3.png → image3.jpg ✅
 ...
 共转换25个文件 ✅
-```text
 ### 8.2.2 知识管理类Skills
 
 **4. web-clipper（网页剪藏）**
 
-```
 ⭐ 评分：4.9/5.0
 📥 下载量：45,000+
 👤 作者：OpenClaw官方
@@ -689,10 +651,8 @@ OpenClaw：已保存！
 摘要：[自动生成的摘要]
 标签：#AI #技术 #趋势
 位置：备忘附录 > AI学习 ✅
-```text
 **5. note-sync（笔记同步）**
 
-```
 ⭐ 评分：4.8/5.0
 📥 下载量：32,000+
 👤 作者：OpenClaw官方
@@ -708,10 +668,8 @@ OpenClaw：已保存！
 - Notion
 - Obsidian
 - Evernote
-```text
 **6. github-manager（GitHub项目管理）**
 
-```
 ⭐ 评分：4.6/5.0
 📥 下载量：25,000+
 👤 作者：社区开发布者
@@ -732,12 +690,10 @@ Stars：15.3k
 语言：TypeScript
 核心功能：[详细分析]
 推荐指数：⭐⭐⭐⭐⭐
-```text
 ### 8.2.3 日程管理类Skills
 
 **7. calendar-sync（日历同步）**
 
-```
 ⭐ 评分：5.0/5.0
 📥 下载量：60,000+
 👤 作者：OpenClaw官方
@@ -756,10 +712,8 @@ OpenClaw：已创建日历事件！
 时间：2026-02-12 15:00-16:00
 地点：会议室A
 提醒：提前15分钟 ✅
-```text
 **8. reminder（智能提醒）**
 
-```
 ⭐ 评分：4.7/5.0
 📥 下载量：38,000+
 👤 作者：OpenClaw官方
@@ -777,12 +731,10 @@ OpenClaw：已设置提醒！
 内内容：该喝水了💧
 时间：每天 08:00
 方式：飞书消息 ✅
-```text
 ### 8.2.4 自动化类Skills
 
 **9. scheduler（任务调度）**
 
-```
 ⭐ 评分：4.9/5.0
 📥 下载量：42,000+
 👤 作者：OpenClaw官方
@@ -801,10 +753,8 @@ OpenClaw：已设置定时任务！
 时间：每天 08:00
 Cron：0 8 * * *
 状态：已启用 ✅
-```text
 **10. monitor（网站监控）**
 
-```
 ⭐ 评分：4.6/5.0
 📥 下载量：28,000+
 👤 作者：社区开发布者
@@ -823,12 +773,10 @@ OpenClaw：已设置监控！
 网站：Example Blog
 频率：每天2次
 通知：飞书消息 ✅
-```text
 ### 8.2.5 工具类Skills
 
 **11. screenshot（截图工具）**
 
-```
 ⭐ 评分：4.8/5.0
 📥 下载量：35,000+
 👤 作者：OpenClaw官方
@@ -845,12 +793,10 @@ OpenClaw：已设置监控！
 OpenClaw：已截图！
 [发布送截图]
 是否需要OCR识别文字？
-```text
 ![截图技能演示 - 自动捕获屏幕内内容](https://upload.maynor1024.live/file/1770176353570_image_35.jpg)
 
 **12. translator（翻译助手）**
 
-```
 ⭐ 评分：4.7/5.0
 📥 下载量：30,000+
 👤 作者：社区开发布者
@@ -867,7 +813,6 @@ OpenClaw：已截图！
 
 OpenClaw：翻译结果：
 "Artificial Intelligence is changing the world"
-```text
 ### 8.2.6 Skills推荐总结
 
 **必装Top 10**：
@@ -898,7 +843,6 @@ openclaw skill install scheduler note-sync file-organizer
 openclaw skill install calendar-sync file-search web-clipper \
   scheduler note-sync file-organizer screenshot reminder \
   batch-processor translator
-```text
 ### 8.2.7 核心Skills详解（2026年必备）
 
 > 💡 **新增内内容**：基于1715+个技能生态，精选7大核心技能，每个都经过实战验证。
@@ -918,12 +862,10 @@ openclaw skill install calendar-sync file-search web-clipper \
 **安装命令**：
 ```bash
 npx clawhub@latest install mcporter
-```text
 **配置示例**：
 ```bash
 # 配置MCP服务器（以连接本地文件为例）
 openclaw mcp add --transport stdio local-files npx -y @modelcontextprotocol/server-filesystem /root/Documents
-```text
 **使用场景**：
 - "读取Notion中的项目文档，整理成Markdown"
 - "把GitHub上的最新代码提交记附录同步到本地"
@@ -938,7 +880,6 @@ openclaw mcp add --transport stdio local-files npx -y @modelcontextprotocol/serv
 **安装命令**：
 ```bash
 npx clawhub@latest install brave-search
-```text
 **使用场景**：
 - **代码报错排查**："帮我排查这个Python报错的原因，找最新的解决方案"
 - **竞品调研**："查一下某产品最新功能的实现方式，附代码片段"
@@ -953,7 +894,6 @@ npx clawhub@latest install brave-search
 **安装命令**：
 ```bash
 npx clawhub@latest install transcript-api
-```text
 **使用场景**：
 "提取这个2小时Next.js教程视频的核心代码逻辑，按章节节整理成学习笔记"
 
@@ -967,7 +907,6 @@ npx clawhub@latest install transcript-api
 **安装命令**：
 ```bash
 npx clawhub@latest install file-system-manager
-```text
 ![1Password CLI集成 - 安全管理密码凭证](https://upload.maynor1024.live/file/1770778507814_image-20260211105458447.png)
 
 
@@ -977,7 +916,6 @@ npx clawhub@latest install file-system-manager
 ```bash
 # 配置授权目附录（仅开放工作目附录，避免全硬盘访问）
 openclaw config set fs.allow-path /root/Projects
-```text
 **使用场景**：
 - "帮我重构这个React组件，优化代码结构并修复ESLint报错"
 - "将本地Markdown文件转为PDF，保存到指定目附录"
@@ -992,7 +930,6 @@ openclaw config set fs.allow-path /root/Projects
 **安装命令**：
 ```bash
 npx clawhub@latest install playwright-headless
-```text
 **使用场景**：
 - "每天早上8点自动登录公司抢票系统，帮我预约车票"
 - "定时截图某政府网站的公告，有更新就保存并提醒"
@@ -1007,7 +944,6 @@ npx clawhub@latest install playwright-headless
 **安装命令**：
 ```bash
 npx clawhub@latest install design-doc-mermaid
-```text
 **使用场景**：
 "帮我画1个用户注册的时序图，包含前端、后端、数据库交互"
 
@@ -1021,12 +957,10 @@ npx clawhub@latest install design-doc-mermaid
 **安装命令**：
 ```bash
 npx clawhub@latest install google-workspace
-```text
 **授权配置**：
 ```bash
 # 授权Google账号（按终端提示完成浏览器认证）
 openclaw auth google
-```text
 **使用场景**：
 - "查一下我这周的Gmail邮件和Calendar日程，生成一份简洁的周报，发布给老板"
 - "根据会议纪要，自动创建Google Calendar日程，邀请参会人员"
@@ -1042,7 +976,6 @@ openclaw auth google
 # 安装Skills双幻神
 npx clawhub@latest install find-skills
 npx clawhub@latest install proactive-agent
-```text
 **使用场景**：
 - find-skills：当OpenClaw无法完成某个任务时，自动搜索并推荐合适的Skills
 - ProactiveAgent：做了几次日报转HTML后，主动访问"要不要我帮你自动化这个流程？"
@@ -1059,7 +992,6 @@ npx clawhub@latest install proactive-agent
 npx clawhub@latest install mcporter brave-search transcript-api \
   file-system-manager playwright-headless design-doc-mermaid google-workspace \
   find-skills proactive-agent
-```text
 ---
 
 ## 8.3 Skills 安装方法详解
@@ -1076,7 +1008,6 @@ npx clawhub@latest install mcporter brave-search transcript-api \
 **安装命令**：
 ```bash
 npx clawhub@latest install <技能名称>
-```text
 **实际示例**：
 ```bash
 # 安装网页搜索技能
@@ -1084,7 +1015,6 @@ npx clawhub@latest install brave-search
 
 # 安装多个技能
 npx clawhub@latest install brave-search transcript-api file-system-manager
-```text
 **常用管理命令**：
 ```bash
 # 查看已安装技能
@@ -1098,7 +1028,6 @@ npx clawhub@latest uninstall <skill-slug>
 
 # 更新所有技能
 npx clawhub@latest update --all
-```text
 ### 8.3.2 方法二：对话式安装（最懒人方式）
 
 **特点**：
@@ -1109,9 +1038,7 @@ npx clawhub@latest update --all
 **使用方法**：
 
 直接在聊天界面中输入：
-```
 请安装这个技能：https://github.com/openclaw/skills/tree/main/skills/steipete/brave-search
-```text
 AI会自动帮你下载和配置，完全不需要手动操作！
 
 **适用场景**：
@@ -1136,7 +1063,6 @@ cp -r skills/skills/<作者>/<技能名> ~/.openclaw/skills/
 
 # 3. 重启OpenClaw
 openclaw gateway restart
-```text
 ---
 
 ## 8.4 实战应用案例
@@ -1190,7 +1116,6 @@ openclaw gateway restart
 **安装命令**：
 ```bash
 npx clawhub@latest install github linear-integration slack-bot google-workspace
-```text
 **自动化工作流**：
 1. **自动代码审查**：每次PR提交自动进行基础代码检查
 2. **任务自动分配**：根据团队成员工作量和专长智能分配任务
@@ -1217,7 +1142,6 @@ npx clawhub@latest install github linear-integration slack-bot google-workspace
 **安装命令**：
 ```bash
 npx clawhub@latest install home-assistant weather-api location-tracker automation-scheduler
-```text
 ---
 
 ## 8.5 安全使用指南
@@ -1243,7 +1167,6 @@ docker update --cpus=1 --memory=2g openclaw-2026
 
 # 备份OpenClaw 配置，防止恶意修改
 docker cp openclaw-2026:/root/.openclaw /root/openclaw-backup
-```text
 **安全检查清单**：
 - ✅ 查看技能的GitHub仓库
 - ✅ 检查技能的依赖项
@@ -1306,7 +1229,6 @@ npm install -g secureclaw
 
 # 扫描已安装的skills
 secureclaw scan ~/.openclaw/skills/
-```
 
 虽然不能100%防护，但能拦住已知的攻击模式。
 
@@ -1333,7 +1255,6 @@ ping github.com
 
 # 配置国内镜像源（如遇网络访问题）
 npm config set registry https://registry.npmmirror.com
-```text
 **访问题二：技能加载失败**
 ```bash
 # 查看技能加载状态
@@ -1345,7 +1266,6 @@ openclaw plugins load <skill-name>
 # 更新所有技能
 clawhub update --all
 openclaw gateway restart
-```text
 **访问题三：技能执行无响应**
 ```bash
 # 查看技能执行日志
@@ -1353,7 +1273,6 @@ openclaw logs --skill <skill-name>
 
 # 检查权限配置
 openclaw config get fs.allow-path
-```text
 ---
 
 ## 8.6 Skills开发布指南
@@ -1370,14 +1289,12 @@ openclaw config get fs.allow-path
 5. **分分享到社区**：将技能贡献给社区
 
 **技能目附录结构**：
-```
 my-custom-skill/
 ├── SKILL.md          # 技能描述文档
 ├── config.json       # 配置文件
 ├── scripts/          # 执行脚本
 │   └── main.js
 └── README.md         # 使用说明
-```text
 **项目文件结构示例**：
 
 ![自定义Skills项目结构 - 完整的开发布示例](https://upload.maynor1024.live/file/1770813835155_image3.png)
@@ -1396,19 +1313,17 @@ my-project/
 │  └─ config.yml           # Claude 项目级配置（可选）
 ├─ .gitignore
 └─ README.md               # 项目整体说明
-```text
 **Claude Code执行效果**：
 
 接下来我们在终端执行以下命令启动 Claude Code：
 
 ```bash
 claude
-```text
+```
 输入任务：
 
 ```
 帮我写1个计算用户折扣的函数
-```text
 Claude 会扫描已安装的 Skills，发布现你的请求涉及 "Python 代码编写"，匹配了 python-naming-standard。
 
 ![Claude Code执行效果 - Skills自动匹配和调用](https://upload.maynor1024.live/file/1770813836904_image4.png)
@@ -1419,7 +1334,6 @@ Claude 会扫描已安装的 Skills，发布现你的请求涉及 "Python 代码
 def _internal_get_discount(user_score):
     # 计算逻辑...
     return discount
-```text
 ### 8.6.2 技能开发布最佳实践
 
 **设计原则**：
@@ -1446,7 +1360,6 @@ module.exports = {
     }
   }
 };
-```text
 ---
 
 ## 8.7 自定义Skills开发布（原8.3节）
@@ -1484,7 +1397,6 @@ openclaw docs
 
 # 4. 查看示例
 openclaw examples
-```text
 ### 8.3.2 Skills文件格式（AgentSkills兼内容）
 
 **基本格式**：
@@ -1506,7 +1418,6 @@ description: Generate or edit images via Gemini 3 Pro Image
 ## 使用方法
 
 发布送：画一只可爱的猫
-```text
 **完整示例**：
 
 ```markdown
@@ -1550,7 +1461,6 @@ metadata: {
 ## 使用方法
 
 发布送：用Gemini搜索最新的AI新闻
-```text
 **Frontmatter字段说明**：
 
 | 字段 | 必填 | 说明 |
@@ -1567,12 +1477,10 @@ metadata: {
 
 **注意事项**：
 
-```
 ⚠️ 重要：
 1. 内嵌智能体的解析器仅支持单行frontmatter键
 2. metadata必须是单行JSON对象
 3. 在说明中使用{baseDir}引用Skills文件夹路径
-```text
 ### 8.3.3 Skills门控（加载时过滤）
 
 **什么是门控**：
@@ -1599,7 +1507,6 @@ metadata: {
   }
 }
 ---
-```text
 **门控字段说明**：
 
 | 字段 | 说明 | 示例 |
@@ -1649,7 +1556,6 @@ metadata: {
     }
   }
 }
-```text
 ### 8.3.4 Skills 安装器配置
 
 **什么是安装器**：
@@ -1692,7 +1598,6 @@ metadata: {
   }
 }
 ---
-```text
 **安装器字段说明**：
 
 | 字段 | 说明 |
@@ -1727,10 +1632,8 @@ metadata: {
     ]
   }
 }
-```text
 **安装器选择逻辑**：
 
-```
 1. 如果列出多个安装器，Gateway会选择首选选项：
    - 优先选择brew（如果可用）
    - 其次选择node
@@ -1743,12 +1646,10 @@ metadata: {
 3. Node安装遵循配置：
    - skills.install.nodeManager（默认npm）
    - 选项：npm/pnpm/yarn/bun
-```text
 ### 8.3.5 项目结构
 
 **标准Skills目附录结构**：
 
-```
 my-skill/
 ├── SKILL.md              # Skills定义（必需）
 ├── README.md             # 说明文档
@@ -1759,7 +1660,6 @@ my-skill/
 │   └── example.md
 └── assets/               # 资源文件
     └── icon.png
-```text
 **SKILL.md引用文件**：
 
 在SKILL.md中可以使用`{baseDir}`引用Skills文件夹路径：
@@ -1777,11 +1677,9 @@ description: My custom skill
 运行安装脚本：
 ```bash
 bash {baseDir}/tools/setup.sh
-```text
 ## 示例
 
 查看示例：{baseDir}/examples/example.md
-```
 
 由于内内容较长，让我先提交当前进度，然后继续完成剩余章节节。
 
@@ -1820,7 +1718,6 @@ export default class HelloSkill extends Skill {
     return null; // 不处理其他消息
   }
 }
-```text
 **测试Skills**：
 
 ```bash
@@ -1831,7 +1728,6 @@ npm run dev
 你：你好
 
 OpenClaw：你好！我是Hello Skill，很高兴认识你！😊
-```text
 **实战案例2：封装第三方API**
 
 ```typescript
@@ -1881,7 +1777,6 @@ export default class WeatherSkill extends Skill {
     }
   }
 }
-```text
 **实战案例3：复杂Skills开发布**
 
 ```typescript
@@ -1973,7 +1868,6 @@ export default class NoteSkill extends Skill {
     }
   }
 }
-```text
 ### 8.3.4 调试和测试技巧
 
 **调试方法**：
@@ -1989,7 +1883,6 @@ async onMessage(message: string) {
   
   return result;
 }
-```text
 **2. 使用调试器**
 ```bash
 # 启动调试模式
@@ -1997,7 +1890,6 @@ npm run dev:debug
 
 # 在VSCode中设置断点
 # 按F5开始调试
-```text
 **3. 单元测试**
 ```typescript
 // tests/index.test.ts
@@ -2017,7 +1909,6 @@ describe('HelloSkill', () => {
     expect(response).toContain('再见');
   });
 });
-```text
 **运行测试**：
 ```bash
 # 运行所有测试
@@ -2028,7 +1919,6 @@ npm test -- index.test.ts
 
 # 查看测试覆盖率
 npm run test:coverage
-```text
 ### 8.3.5 发布布到ClawHub
 
 **发布布前检查**：
@@ -2045,7 +1935,6 @@ npm run build
 
 # 4. 检查包大小
 npm run size
-```text
 **发布布步骤**：
 
 ```bash
@@ -2071,7 +1960,6 @@ Skill信息：
 - 链接：https://clawhub.ai/skills/hello-skill
 
 现在其他用户可以安装你的Skill了！
-```text
 **发布布后维护**：
 
 ```bash
@@ -2083,7 +1971,6 @@ openclaw skill stats
 
 # 查看用户反馈
 openclaw skill feedback
-```text
 ---
 
 ## 8.4 Skills管理技巧
@@ -2118,10 +2005,8 @@ openclaw skill feedback
     }
   }
 }
-```text
 **配置规则**：
 
-```
 1. 配置键默认匹配Skills名称
 2. 如果Skills名称包含连字符，用引号括起键名
 3. 如果Skills定义了metadata.openclaw.skillKey，使用该键
@@ -2129,7 +2014,6 @@ openclaw skill feedback
 示例：
 - Skills名称：file-search
 - 配置键："file-search"（需要引号）
-```text
 **配置字段说明**：
 
 | 字段 | 说明 | 示例 |
@@ -2141,12 +2025,10 @@ openclaw skill feedback
 
 **环境变量注入规则**：
 
-```
 1. env中的变量仅在进程中尚未设置时注入
 2. apiKey为声明primaryEnv的Skills提供便捷配置
 3. config用于自定义单Skills字段
 4. 环境变量在智能体运行时注入，运行结束后恢复
-```text
 **示例配置**：
 
 ```json
@@ -2186,7 +2068,6 @@ openclaw skill feedback
     ]
   }
 }
-```text
 **allowBundled白名单**：
 
 ```json
@@ -2198,7 +2079,6 @@ openclaw skill feedback
     ]
   }
 }
-```text
 说明：
 - 如果设置了`allowBundled`，只有列表中的内置Skills才有资格
 - 托管/工作区Skills不受影响
@@ -2221,32 +2101,25 @@ Skills监视器会监视Skills文件夹，当SKILL.md文件更改时自动更新
     }
   }
 }
-```text
 **工作原理**：
 
-```
 1. OpenClaw在会话开始时对有资格的Skills进行快照
 2. 监视器监视Skills文件夹的变化
 3. 当SKILL.md更改时，刷新Skills列表
 4. 刷新后的列表在下1个智能体轮次生效
-```text
 **使用场景**：
 
-```
 ✅ 开发布Skills时实时测试
 ✅ 修改Skills 配置后立即生效
 ✅ 添加新Skills后自动加载
-```text
 ### 8.4.3 安全注意事项
 
 **⚠️ 重要安全提醒**：
 
-```
 1. 将第三方Skills视为不受信任的代码
 2. 启用前请仔细阅读Skills内内容
 3. 对于不受信任的输入和高风险工具，使用沙箱隔离
 4. 保护API 密钥，不要泄露到日志中
-```text
 **安全最佳实践**：
 
 **1. 审查Skills代码**
@@ -2257,7 +2130,6 @@ cat ~/.openclaw/skills/my-skill/SKILL.md
 
 # 检查Skills权限要求
 grep "requires" ~/.openclaw/skills/my-skill/SKILL.md
-```text
 **2. 使用沙箱隔离**
 
 ```json
@@ -2273,7 +2145,6 @@ grep "requires" ~/.openclaw/skills/my-skill/SKILL.md
     }
   }
 }
-```text
 **3. 保护API 密钥**
 
 ```json
@@ -2295,7 +2166,6 @@ grep "requires" ~/.openclaw/skills/my-skill/SKILL.md
 name: my-skill
 description: My skill with API key: sk-xxx7890  # ❌ 不要在SKILL.md中暴露密钥
 ---
-```text
 **4. 限制Skills权限**
 
 ```json
@@ -2312,7 +2182,6 @@ description: My skill with API key: sk-xxx7890  # ❌ 不要在SKILL.md中暴露
     }
   }
 }
-```text
 **5. 定期审计**
 
 ```bash
@@ -2324,7 +2193,6 @@ cat ~/.openclaw/openclaw.json | grep -A 10 "skills"
 
 # 查看Skills日志
 openclaw logs --skill my-skill
-```text
 ### 8.4.4 性能优化
 
 **Token影响（Skills列表）**：
@@ -2346,10 +2214,8 @@ total = 195 + Σ (97 + len(name) + len(description) + len(location))
 
 Token估算（OpenAI风格）：
 ~4字符/token，所以每个Skills ≈ 24 token + 字段长度
-```text
 **优化建议**：
 
-```
 1. 保支持Skills描述简洁
    ❌ 差：This is a very detailed and comprehensive skill that can do many things including...
    ✅ 好：Generate images via Gemini API
@@ -2373,7 +2239,6 @@ Token估算（OpenAI风格）：
        "allowBundled": ["file-search", "calendar-sync"]
      }
    }
-```text
 **性能监控**：
 
 ```bash
@@ -2386,7 +2251,6 @@ Skills加载统计：
 - 加载时间：120ms
 - Token消耗：约450 tokens
 - 内存占用：2.3MB
-```text
 ### 8.4.5 多智能体Skills管理
 
 **单智能体 vs 共分享Skills**：
@@ -2401,7 +2265,6 @@ Skills加载统计：
 - 位置：~/.openclaw/skills
 - 作用域：所有智能体可见
 - 用途：通用功能
-```text
 **多智能体配置示例**：
 
 ```json
@@ -2429,7 +2292,6 @@ Skills加载统计：
     ]
   }
 }
-```text
 **共分享Skills文件夹**：
 
 ```json
@@ -2443,7 +2305,6 @@ Skills加载统计：
     }
   }
 }
-```text
 ### 8.4.6 远程macOS节点（Linux Gateway）
 
 **跨平台Skills支持**：
@@ -2462,23 +2323,18 @@ Skills加载统计：
     }
   }
 }
-```text
 **工作原理**：
 
-```
 1. Linux Gateway检测到macOS节点
 2. 检查节点上的二进制文件
 3. 将macOS专用Skills标记为可用
 4. 通过nodes工具执行Skills
-```text
 **注意事项**：
 
-```
 ⚠️ 如果macOS节点离线：
 - Skills仍然可见
 - 调用可能失败
 - 直到节点重新连接
-```text
 ### 8.4.7 Skills备份和恢复
 
 **备份Skills**：
@@ -2499,7 +2355,6 @@ openclaw skill backup --output ~/backups/skills.zip
 备份完成！
 文件：~/backups/skills-2026-02-11.zip
 大小：15.3MB
-```text
 **恢复Skills**：
 
 ```bash
@@ -2514,7 +2369,6 @@ openclaw skill restore ~/backups/skills-2026-02-11.zip
 
 恢复完成！
 共恢复3个Skills
-```text
 **手动备份**：
 
 ```bash
@@ -2523,12 +2377,10 @@ cp -r ~/.openclaw/skills ~/backups/skills-$(date +%Y%m%d)
 
 # 备份配置文件
 cp ~/.openclaw/openclaw.json ~/backups/openclaw-$(date +%Y%m%d).json
-```text
 ### 8.4.8 常见访问题排查
 
 **访问题1：Skill无法加载**
 
-```
 症状：Skill安装成功但无法使用
 
 排查步骤：
@@ -2543,10 +2395,8 @@ cp ~/.openclaw/openclaw.json ~/backups/openclaw-$(date +%Y%m%d).json
 
 4. 重新安装
    openclaw skill reinstall file-search
-```text
 **访问题2：Skill响应慢**
 
-```
 症状：Skill执行时间过长
 
 排查步骤：
@@ -2561,10 +2411,8 @@ cp ~/.openclaw/openclaw.json ~/backups/openclaw-$(date +%Y%m%d).json
 
 4. 检查依赖
    which uv python
-```text
 **访问题3：Skill配置错误**
 
-```
 症状：Skill功能异常
 
 排查步骤：
@@ -2579,10 +2427,8 @@ cp ~/.openclaw/openclaw.json ~/backups/openclaw-$(date +%Y%m%d).json
 
 4. 查看文档
    openclaw skill docs file-search
-```text
 **访问题4：Skills冲突**
 
-```
 症状：多个Skills响应同一命令
 
 排查步骤：
@@ -2597,7 +2443,6 @@ cp ~/.openclaw/openclaw.json ~/backups/openclaw-$(date +%Y%m%d).json
 
 4. 修改命令关键词
    编辑SKILL.md，修改触发布词
-```text
 ---
 
 ## 📝 本章节小结
@@ -2699,13 +2544,11 @@ A：使用`openclaw skill backup`定期备份。
 ### 8.8.1 为什么选择百度千帆Skills？
 
 **核心优势**：
-```
 ✅ 官方支持：百度官方维护，稳定可靠
 ✅ 中文优化：针对中文场景深度优化
 ✅ 免费使用：大部分Skills免费
 ✅ 易于集成：一键安装，无需复杂配置
 ✅ 生态完善：覆盖搜索、学术、怎么办公等场景
-```text
 **与其他Skills对比**：
 
 | 特性 | 百度千帆Skills | 国际Skills | 社区Skills |
@@ -2731,7 +2574,6 @@ A：使用`openclaw skill backup`定期备份。
 # 云端部署自带，无需安装
 # 本地部署需要安装
 clawhub install baidu-search
-```text
 **适用场景**：
 - 实时信息查询
 - 行业动态追踪
@@ -2890,12 +2732,10 @@ openclaw config set banana.apiKey "your-api-key"
 你：用Banana画一只可爱的猫
 OpenClaw：正在生成图片...
 [图片]
-```text
 #### 实战案例
 
 **案例1：手机上画图**
 
-```text
 场景：在飞书上用OpenClaw画图
 
 步骤：
@@ -2909,10 +2749,8 @@ OpenClaw：正在生成图片...
 - 无需打开电脑
 - 随时随地画图
 - 自动保存到相册
-```text
 **案例2：批量生成图片**
 
-```text
 你：帮我生成3张图片：
 1. 科技感的怎么办公室
 2. 未来城市
@@ -2924,7 +2762,6 @@ OpenClaw：正在生成...
 [图片3]
 
 全部完成 ✅
-```text
 #### 提示词优化技巧
 
 **基本原则**：
@@ -2973,12 +2810,10 @@ openclaw config set notion.databaseId "your-database-id"
 # 测试
 你：把这段内内容保存到Notion
 OpenClaw：已保存到Notion ✅
-```text
 #### 实战案例
 
 **案例1：笔记同步**
 
-```text
 你：保存这段笔记到Notion：
 [笔记内内容]
 
@@ -2986,19 +2821,15 @@ OpenClaw：已保存 ✅
 标题：[自动生成]
 标签：#笔记
 链接：https://notion.so/...
-```text
 **案例2：任务管理**
 
-```text
 你：添加任务：完成项目报告
 截止日期：明天
 优先级：高
 
 OpenClaw：任务已添加 ✅
-```text
 **案例3：知识库构建**
 
-```text
 你：把这篇文章节保存到知识库
 [文章节链接]
 
@@ -3009,7 +2840,6 @@ OpenClaw：正在处理...
 - 保存到Notion ✅
 
 完成！
-```text
 ### 8.9.4 视频生成Skills
 
 #### 视频生成工具介绍
@@ -3037,10 +2867,8 @@ openclaw config set seedream.apiKey "your-api-key"
 
 # 配置可灵
 openclaw config set kling.apiKey "your-api-key"
-```text
 #### 实战案例
 
-```text
 你：生成1个5秒的视频：
 海浪拍打沙滩，日落时分
 
@@ -3051,7 +2879,6 @@ OpenClaw：正在生成...
 时长：5秒
 分辨率：1080p
 大小：15MB
-```text
 ### 8.9.5 语音合成Skills
 
 #### 语音合成工具
@@ -3082,7 +2909,6 @@ openclaw config set heluo.apiKey "your-api-key"
 
 OpenClaw：正在生成...
 [语音文件]
-```text
 ### 8.9.6 自定义API封装
 
 如果ClawHub上没有你需要的API Skills，可以自己封装：
@@ -3122,7 +2948,6 @@ export default class CustomAPISkill extends Skill {
     }
   }
 }
-```text
 ### 8.9.7 成本对比
 
 **AI绘图成本对比**：
@@ -3155,7 +2980,6 @@ openclaw config set api.keys '{
   "banana": "your-key",
   "notion": "your-token"
 }'
-```text
 **2. 错误处理**
 ```typescript
 try {
@@ -3167,7 +2991,6 @@ try {
   }
   return '调用失败，请检查配置';
 }
-```text
 **3. 成本控制**
 - 设置每日调用上限
 - 使用缓存减少重复调用
@@ -3209,7 +3032,6 @@ which op
 
 op --version
 # 输出：2.32.1
-```text
 **配置使用**：
 
 1. **启用桌面应用集成**：
@@ -3224,7 +3046,6 @@ op signin
 
 # 或指定账户域名
 op signin my.1password.com
-```text
 3. **在OpenClaw中使用**：
 ```bash
 # 获取密码
@@ -3235,7 +3056,6 @@ op item get "OpenAI API" --fields credential
 
 # 列出所有项目
 op item list
-```text
 **OpenClaw集成示例**：
 
 ```
@@ -3248,7 +3068,6 @@ OpenClaw：正在获取...
 
 OpenClaw：好的，正在创建...
 ✅ 仓库创建成功！
-```text
 **安全提示**：
 - ⚠️ 不要在代码中硬编码密码
 - ✅ 使用1Password CLI安全管理所有凭证
@@ -3281,7 +3100,6 @@ camsnap是一个用于捕获RTSP/ONVIF摄像头画面的命令行工具，让Ope
 # 检查CPU架构
 uname -m
 # 输出：arm64（Apple Silicon）或 x86_64（Intel）
-```text
 **步骤2：确保使用ARM64版本的Homebrew（Apple Silicon Mac）**
 
 如果你的Mac是Apple Silicon（M1/M2/M3芯片），需要确保安装了ARM64版本的Homebrew：
@@ -3303,7 +3121,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew --version
 which brew
 # 应该输出：/opt/homebrew/bin/brew
-```text
 **步骤3：安装camsnap**
 
 ```bash
@@ -3319,7 +3136,6 @@ which camsnap
 
 camsnap --version
 # 输出：0.2.0
-```text
 **步骤4：创建符号链接（可选，解决兼内容性访问题）**
 
 如果OpenClaw无法找到camsnap，可以创建符号链接：
@@ -3335,7 +3151,6 @@ ls -la /usr/local/bin/camsnap
 # 测试
 /usr/local/bin/camsnap --version
 # 输出：0.2.0
-```text
 **使用示例**：
 
 ```bash
@@ -3347,7 +3162,6 @@ camsnap --url rtsp://192.168.1.100:554/stream --duration 10 --output video.mp4
 
 # 指定分辨率
 camsnap --url rtsp://192.168.1.100:554/stream --width 1920 --height 1080 --output hd.jpg
-```text
 **OpenClaw集成示例**：
 
 ```
@@ -3362,7 +3176,6 @@ OpenClaw：正在捕获画面...
 OpenClaw：正在附录制...
 ⏱️ 附录制中... 10秒
 ✅ 已保存到：~/Videos/door-monitor-2026-02-13-14-31.mp4
-```text
 **故障排查**：
 
 **访问题1：安装失败，提示"arm64 architecture is required"**
@@ -3374,7 +3187,6 @@ OpenClaw：正在附录制...
 # 检查当前brew架构
 brew config | grep -E "CPU|Homebrew"
 # 应该显示：CPU: octa-core 64-bit arm_*
-```text
 **访问题2：OpenClaw提示"Missing: bin:camsnap"**
 
 ```bash
@@ -3383,7 +3195,6 @@ brew config | grep -E "CPU|Homebrew"
 
 # 或者重启OpenClaw Gateway
 openclaw gateway restart
-```text
 **访问题3：摄像头连接失败**
 
 ```bash
@@ -3395,7 +3206,6 @@ camsnap --url rtsp://admin:password@192.168.1.100:554/stream --test
 
 # 查看详细错误信息
 camsnap --url rtsp://192.168.1.100:554/stream --verbose
-```
 
 **安全提示**：
 - ⚠️ 不要在公网暴露摄像头RTSP端口
@@ -3419,7 +3229,6 @@ camsnap --url rtsp://192.168.1.100:554/stream --verbose
    
    # 检查可用空间
    df -h
-   ```
 
 2. **选择合适的安装方式**
    - Homebrew（推荐，适合macOS/Linux）
@@ -3437,7 +3246,6 @@ camsnap --url rtsp://192.168.1.100:554/stream --verbose
    
    # 测试基本功能
    <tool-name> --help
-   ```
 
 4. **配置环境变量**
    ```bash
@@ -3447,7 +3255,6 @@ camsnap --url rtsp://192.168.1.100:554/stream --verbose
    
    # 重新加载配置
    source ~/.zshrc
-   ```
 
 5. **集成到OpenClaw**
    ```bash
@@ -3456,7 +3263,6 @@ camsnap --url rtsp://192.168.1.100:554/stream --verbose
    
    # 验证工具可用性
    openclaw tools list
-   ```
 
 **常见访问题排查**：
 

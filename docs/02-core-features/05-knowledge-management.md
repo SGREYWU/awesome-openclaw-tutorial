@@ -33,9 +33,7 @@ OpenClaw可以帮你解决这些访问题。
 
 OpenClaw的知识库管理基于以下原理：
 
-```text
 网页链接 → OpenClaw抓取 → 智能摘要 → 存储到备忘附录/Notion
-```text
 **关键优势**：
 1. **自动抓取**：无需手动复制粘贴
 2. **智能摘要**：提取核心观点
@@ -59,7 +57,6 @@ OpenClaw的知识库管理基于以下原理：
 
 **示例对话**：
 
-```
 你：帮我把这篇文章节总结一下，存到备忘附录
 https://example.com/ai-article
 
@@ -76,7 +73,6 @@ OpenClaw：已经帮你总结完成并存到备忘附录了！
 3. 个人AI助手普及
 
 已保存到：备忘附录 > AI学习 > 技术文章节
-```text
 ![image-20260211212230061](https://upload.maynor1024.live/file/1770816158161_image-20260211212230061.png)
 
 **实际效果**：
@@ -117,14 +113,12 @@ OpenClaw：已经帮你总结完成并存到备忘附录了！
 ## 我的笔记
 
 [可以在这里添加你的想法]
-```text
 ### 5.1.4 实战案例2：新闻资讯整理
 
 **场景**：你关注AI行业动态，每天看到很多新闻，想系统化整理。
 
 **解决方案**：
 
-```
 你：帮我整理这3篇AI新闻，分类存储
 
 链接1：https://news1.com/ai-breakthrough
@@ -151,25 +145,20 @@ OpenClaw：已完成整理！
 - 核心内内容：Gemini 3.0发布布
 - 新功能：视频理解、代码生成
 - 保存位置：备忘附录 > AI资讯 > 产品更新
-```text
 **高级技巧**：
 
 1. **自动分类**
-```
 你：以后我发布AI新闻链接，自动分类到：
 - 技术突破 → 备忘附录/AI资讯/技术
 - 公司动态 → 备忘附录/AI资讯/公司
 - 产品更新 → 备忘附录/AI资讯/产品
 
 OpenClaw：好的，已记住你的分类规则！
-```text
 2. **定期汇总**
-```
 你：每周五晚上8点，把本周保存的AI新闻汇总发布给我
 
 OpenClaw：已设置定期任务！
 每周五20:00会自动生成本周AI资讯汇总。
-```text
 ### 5.1.5 实战案例3：博客文章节收藏
 
 **场景**：你是技术博主，经常看到优秀的博客文章节，想收藏学习。
@@ -178,7 +167,6 @@ OpenClaw：已设置定期任务！
 
 
 **步骤1：收藏文章节**
-```
 你：收藏这篇博客，标签：React、性能优化
 https://blog.example.com/react-performance
 
@@ -186,9 +174,7 @@ OpenClaw：已收藏！
 标题：React性能优化实战
 标签：#React #性能优化
 保存位置：备忘附录 > 技术博客 > 前端开发布
-```text
 **步骤2：提取代码示例**
-```
 你：把这篇文章节里的代码示例单独提取出来
 
 OpenClaw：已提取3个代码示例：
@@ -198,9 +184,7 @@ OpenClaw：已提取3个代码示例：
 示例3：虚拟列表实现
 
 已保存到：备忘附录 > 代码片段 > React
-```text
 **步骤3：生成学习笔记**
-```
 你：根据这篇文章节，生成一份学习笔记
 
 OpenClaw：已生成学习笔记！
@@ -212,7 +196,6 @@ OpenClaw：已生成学习笔记！
 - 延伸阅读（4篇）
 
 保存位置：备忘附录 > 学习笔记 > React性能优化
-```text
 ### 5.1.6 跨设备同步方案
 
 **Mac备忘附录同步**：
@@ -308,7 +291,6 @@ OpenClaw可以帮你高效管理GitHub项目。
 
 **OpenClaw做法**：
 
-```
 你：帮我分析这个GitHub项目，总结核心信息：https://github.com/xianyu110/awesome-openclaw-tutorial ，
 
 OpenClaw：正在分析项目...
@@ -341,7 +323,6 @@ OpenClaw：正在分析项目...
 
 学习价值：⭐⭐⭐⭐⭐
 推荐指数：⭐⭐⭐⭐⭐
-```text
 ![image-20260211212558294](https://upload.maynor1024.live/file/1770816367098_image-20260211212558294.png)
 
 ### 5.2.4 实战案例2：技术选型参考
@@ -351,7 +332,6 @@ OpenClaw：正在分析项目...
 **完整工作流**：
 
 **步骤1：批量分析**
-```
 你：帮我分析对比这3个前端框架项目：
 1. https://github.com/facebook/react
 2. https://github.com/vuejs/core
@@ -364,7 +344,6 @@ OpenClaw：正在分析3个项目...
 [几分钟后]
 
 OpenClaw：分析完成！生成对比报告：
-```text
 **步骤2：查看对比报告**
 
 ```markdown
@@ -445,14 +424,12 @@ OpenClaw：分析完成！生成对比报告：
 | 就业导向 | React | 市场需求最大 |
 
 已保存到：备忘附录 > 技术选型 > 前端框架对比
-```text
 ### 5.2.5 实战案例3：学习资源整理
 
 **场景**：你想系统学习某个技术，需要整理GitHub上的学习资源。
 
 **示例：学习机器学习**
 
-```
 你：帮我整理GitHub上优质的机器学习学习资源，
 包括：教程、项目、工具、论文实现
 
@@ -546,14 +523,12 @@ OpenClaw：已整理完成！
 **第11-12周**：论文阅读和复现
 
 已保存到：备忘附录 > 学习资源 > 机器学习
-```text
 ### 5.2.6 项目追踪与更新
 
 **场景**：你关注了几个重要的开源项目，想及时了解更新。
 
 **解决方案**：
 
-```
 你：帮我追踪这3个项目的更新：
 1. https://github.com/openai/gpt-4
 2. https://github.com/anthropic/claude
@@ -571,7 +546,6 @@ OpenClaw：已设置项目追踪！
 
 推送时间：每周一 09:00
 推送方式：飞书消息
-```text
 **推送示例**：
 
 ```markdown
@@ -596,7 +570,6 @@ OpenClaw：已设置项目追踪！
 - 发布布最佳实践指南
 
 详细内内容已保存到：备忘附录 > GitHub更新 > 2026-02-10
-```text
 ---
 
 ## 5.3 论文笔记整理
@@ -643,7 +616,6 @@ OpenClaw可以帮你高效整理论文笔记。
 
 **操作步骤**：
 
-```
 你：帮我分析这篇论文，生成阅读笔记
 [上传PDF文件：attention-is-all-you-need.pdf]
 
@@ -714,7 +686,6 @@ OpenClaw：分析完成！已生成阅读笔记。
 3. T5: Exploring Transfer Learning
 
 已保存到：备忘附录 > 论文笔记 > NLP > Transformer
-```text
 ### 5.3.4 实战案例2：文献综述
 
 **场景**：你需要写文献综述，整理某个领域的多篇论文。
@@ -722,14 +693,12 @@ OpenClaw：分析完成！已生成阅读笔记。
 **完整工作流**：
 
 **步骤1：批量分析论文**
-```
 你：帮我分析这5篇关于大模型的论文，
 生成文献综述框架
 
 [上传5个PDF文件]
 
 OpenClaw：正在分析5篇论文...
-```text
 **步骤2：生成综述框架**
 ```markdown
 # 大模型发布展综述
@@ -808,7 +777,6 @@ OpenClaw：正在分析5篇论文...
 [自动生成引用列表]
 
 已保存到：备忘附录 > 文献综述 > 大模型发布展
-```text
 ### 5.3.5 实战案例3：研究资料管理
 
 **场景**：你在做某个研究课题，需要系统管理相关资料。
@@ -816,7 +784,6 @@ OpenClaw：正在分析5篇论文...
 **完整管理方案**：
 
 **1. 建立分类体系**
-```
 你：帮我建立1个论文管理体系，
 主题：强化学习在机器人控制中的应用
 
@@ -845,9 +812,7 @@ OpenClaw：已创建分类体系：
     └── 开源项目
 
 已保存到：备忘附录 > 研究资料 > 强化学习-机器人
-```text
 **2. 添加论文到分类**
-```
 你：把这篇论文添加到"核心算法-DQN系列"
 [上传PDF：Playing Atari with Deep RL]
 
@@ -861,9 +826,7 @@ OpenClaw：已添加！
 - 阅读状态：待阅读
 
 已保存到：备忘附录 > 研究资料 > 强化学习-机器人 > 核心算法 > DQN系列
-```text
 **3. 生成研究进展报告**
-```
 你：生成本月研究进展报告
 
 OpenClaw：已生成报告！
@@ -891,12 +854,10 @@ OpenClaw：已生成报告！
 - 撰写文献综述
 
 已保存到：备忘附录 > 研究进展 > 2026-02
-```text
 ### 5.3.6 引用管理技巧
 
 **自动生成引用**：
 
-```
 你：生成这篇论文的引用格式（APA、MLA、IEEE）
 
 OpenClaw：已生成3种引用格式：
@@ -911,7 +872,6 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 A. Vaswani et al., "Attention is all you need," in Advances in Neural Information Processing Systems, 2017, pp. 5998-6008.
 
 已复制到剪贴板！
-```text
 ---
 
 ## 5.4 跨设备同步方案
@@ -946,9 +906,7 @@ OpenClaw提供多种同步方案，满足不同需求。
 ```bash
 # 检查iCloud状态
 系统设置 > Apple ID > iCloud > 备忘附录（开启）
-```text
 2. **OpenClaw保存到备忘附录**
-```
 你：把这篇文章节保存到备忘附录
 
 OpenClaw：已保存到Mac备忘附录！
@@ -956,7 +914,6 @@ OpenClaw：已保存到Mac备忘附录！
 - iPhone备忘附录 ✅
 - iPad备忘附录 ✅
 - iCloud.com ✅
-```text
 3. **在其他设备查看**
    - iPhone：打开备忘附录App
    - iPad：打开备忘附录App
@@ -980,7 +937,6 @@ OpenClaw：已保存到Mac备忘附录！
 
 # 3. 选择同步内内容
 备忘附录 > 偏好设置 > 账户 > iCloud（勾选）
-```text
 **高级设置**：
 
 ```bash
@@ -992,7 +948,6 @@ OpenClaw：已保存到Mac备忘附录！
 
 # 3. 设置同步频率
 系统设置 > iCloud > 管理 > 备忘附录 > 选项
-```text
 **故障排查**：
 
 ```bash
@@ -1013,7 +968,6 @@ OpenClaw：已保存到Mac备忘附录！
 1. 选择保留哪个版本
 2. 手动合并内内容
 3. 使用版本历史
-```text
 ### 5.4.4 Notion同步方案
 
 **适用场景**：
@@ -1031,7 +985,6 @@ OpenClaw：已保存到Mac备忘附录！
 3. 填写名称：OpenClaw
 4. 选择工作区
 5. 复制 Internal Integration Token
-```text
 **步骤2：配置 OpenClaw**
 ```bash
 # 安装Notion Skill
@@ -1042,9 +995,7 @@ openclaw config set notion.token "your-token-here"
 
 # 设置默认数据库
 openclaw config set notion.database "your-database-id"
-```text
 **步骤3：使用Notion同步**
-```
 你：把这篇文章节保存到Notion
 
 OpenClaw：已保存到Notion！
@@ -1055,7 +1006,6 @@ OpenClaw：已保存到Notion！
 创建时间：2026-02-10 10:30
 
 查看链接：https://notion.so/...
-```text
 **Notion优势**：
 - ✅ 强大的组织能力（数据库、看板、日历）
 - ✅ 团队协作功能
@@ -1082,7 +1032,6 @@ OpenClaw：已保存到Notion！
 **步骤1：安装Obsidian Skill**
 ```bash
 openclaw skill install obsidian-sync
-```text
 **步骤2：配置Vault路径**
 ```bash
 # 设置Obsidian Vault路径
@@ -1090,9 +1039,7 @@ openclaw config set obsidian.vault "/Users/你的用户名/Documents/ObsidianVau
 
 # 设置默认文件夹
 openclaw config set obsidian.folder "知识库"
-```text
 **步骤3：使用Obsidian同步**
-```
 你：把这篇文章节保存到Obsidian
 
 OpenClaw：已保存到Obsidian！
@@ -1106,7 +1053,6 @@ Vault：我的知识库
 - [[大模型发布展]]
 - [[AI应用场景]]
 - [[技术趋势分析]]
-```text
 **Obsidian优势**：
 - ✅ 完全本地存储
 - ✅ 纯Markdown格式
@@ -1125,7 +1071,6 @@ Vault：我的知识库
 
 **场景1：Mac + iPhone组合**
 
-```
 早上（Mac）：
 你：收集今天要看的5篇文章节
 OpenClaw：已保存到备忘附录
@@ -1138,10 +1083,8 @@ OpenClaw：已保存到备忘附录
 晚上（Mac）：
 - 自动同步回Mac
 - 继续深入研究
-```text
 **场景2：多人协作**
 
-```
 团队成员A（Mac）：
 你：整理这周的技术文章节，保存到Notion
 
@@ -1153,15 +1096,12 @@ OpenClaw：已保存到备忘附录
 团队成员C（手机）：
 - Notion App查看
 - 随时随地访问
-```text
 **场景3：跨平台工作流**
 
-```
 步骤1：Mac上收集（OpenClaw + 备忘附录）
 步骤2：iPhone上阅读（备忘附录App）
 步骤3：iPad上编辑（备忘附录App）
 步骤4：网页上分分享（iCloud.com）
-```text
 ### 5.4.7 同步方案对比
 
 | 方案 | 优势 | 劣势 | 适合场景 | 推荐指数 |
@@ -1201,9 +1141,7 @@ OpenClaw：已保存到备忘附录
 # Mac备忘附录自动备份到iCloud
 # 无需额外配置
 # 保留30天历史版本
-```text
 **方案2：定期导出**
-```
 你：每周日晚上8点，导出所有笔记到本地
 
 OpenClaw：已设置定期备份！
@@ -1216,7 +1154,6 @@ OpenClaw：已设置定期备份！
 备份位置：~/Documents/Backups/知识库/
 备份格式：Markdown + PDF
 备份频率：每周日 20:00
-```text
 **方案3：Git版本控制**
 ```bash
 # 对于Obsidian用户
@@ -1225,7 +1162,6 @@ git init
 git add .
 git commit -m "备份知识库"
 git push origin main
-```
 
 ---
 
